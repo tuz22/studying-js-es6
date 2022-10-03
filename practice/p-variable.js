@@ -53,13 +53,19 @@ var 모달창들 = document.querySelectorAll('div');
 for (var i = 0; i < 3; i++){
 
   버튼들[i].addEventListener('click', function(){
-    모달창들[i].style.display = 'block';
+    모달창들[i].style.display = 'block'; // Uncaught TypeError: Cannot read properties of undefined (reading 'style') at HTMLButtonElement.<anonymous>
   });
 
 }
 
-for (var i = 0; i < 3; i++){
+// 1. 반복문 내부 코드를 3번 돌림
+// 2. 이벤트리스너 내부 코드는 반복문 i=0~2 뒤에 실행
+// 3. 버튼을 클릭하고 이벤트리스너 내부 코드가 실행
+// 4. but 이미 반복문이 다 돌아서 i = 3이 되어있음
 
+// 변수를 let으로 바꿔줌
+for (let i = 0; i < 3; i++){
+  // let i =?? <- 이런식으로 반복문안에 참조할 수 있는 범위가 생겨서 제대로 된 범위값을 찾을 수 있음
   버튼들[i].addEventListener('click', function(){
     모달창들[i].style.display = 'block';
   });
