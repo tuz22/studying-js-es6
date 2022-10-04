@@ -50,3 +50,35 @@ var o2 = { a : 2, ...o1 }; // !값 중복(a: 1, a: 2)
 console.log(o2); // {a: 1, b: 2}
 // 값 중복시 가장 뒤에 있는 것을 적용
 
+// 5. 함수 파라미터를 넣을 때
+function 더하기(a, b, c){
+  console.log(a + b + c);
+}
+
+var array2 = [10, 20, 30];
+
+// 하드코딩
+더하기(array2[0], array2[1], array2[2]);
+
+// 예전 방식
+더하기.apply(undefined, array2);
+
+// spread operator 사용
+더하기(...array2);
+
+
+/* (참고) apply 함수 */
+// person.인사()를 person2.인사에 적용시켜줌
+var person = {
+  인사 : function(){
+    console.log('안녕')
+  }
+}
+var person2 = {
+  name : '김뫄뫄'
+}
+person.인사.apply(person2) // == person2.인사();
+
+// apply / call 함수 차이점
+person.인사.apply(person2, [1, 2])
+person.인사.call(person2, 1, 2)
