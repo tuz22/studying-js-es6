@@ -19,3 +19,21 @@ function 더하기3(a, b = 임시함수()){ // default값에 함수도 가능
 }
 더하기3(1);
 
+
+/* arguments */
+// 모든 파라미터를 한꺼번에 다루고 싶을 때 사용
+// 모든 파라미터를 [] 안에 넣는 변수
+function 함수(a, b, c){ // a, b, c : parameter
+  console.log(a, b, c); // a, b, c : arguments
+  console.log(arguments); // Arguments(3) [1, 2, 3, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+}
+함수(1, 2, 3);
+
+/* 예시 */
+// 입력한 파라미터를 전부 콘솔창에 출력해주는 함수
+function 전부출력함수(a, b, c){
+  for (var i = 0; i < arguments.length; i++){
+    console.log(arguments[i]);
+  }
+}
+전부출력함수(2, 3, 4);
