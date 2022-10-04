@@ -1,4 +1,4 @@
-// Template literals
+/* Template literals */
 
 /* backquote 문자열 */
 var 변수 = `apple`;
@@ -18,7 +18,8 @@ function 함수(){
 // 함수()
 함수`이 ${변수}는 맛있어.` // 10 // tagged literal
 
-/* tagged literal */
+
+/* tagged literals */
 // `문자`를 해체분석 가능
 
 function 해체분석기(문자들, 변수들){
@@ -38,7 +39,7 @@ function 해체분석기(문자들, 변수들, 변수들2){
 // 해체분석기 파라미터 2 : ${변수}를 뜻함
 // 해체분석기 파라미터 3 : 두번째 ${변수}를 뜻함
 
-/* tagged literal 예시 */
+/* tagged literals 예시 */
 // 글자 순서 변경
 function 해체분석기(문자들, 변수들){
   console.log(문자들[1] + 문자들[0]);
