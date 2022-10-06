@@ -1,5 +1,5 @@
 /* constructor */
-// == 생성자; object 생성기게
+// == 생성자; object 생성기계
 // 사용 이유?
 // object를 복사하고 싶어서
 // 비슷한 object를 쉽게 여러개 만들기 위해서
@@ -17,14 +17,14 @@ var 학생1 = new 기계(); // object가 하나 새로 생김
 
 // /* object에 함수도 가능 */
 // 하드코딩
-var 학생1 = { 
-  name : 'Kim', 
-  age : 15 
-  sayHi : function(){
-      console.log('안녕하세요' + this.name + ' 입니다');
-  }
-};
-학생1.sayHi();
+// var 학생1 = { 
+//   name : 'Kim', 
+//   age : 15 
+//   sayHi : function(){
+//       console.log('안녕하세요' + this.name + ' 입니다');
+//   }
+// };
+// 학생1.sayHi();
 
 // constructor 사용
 function 기계(이름){
