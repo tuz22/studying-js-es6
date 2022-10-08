@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>import, export</h2>
+
+  <script type="module">
+    
+    // 1. import 가져올거 from '경로';
+    // import a from './library.js';
+    // ! library.js에 있던 모든 내용을 가져오지 않음
+    // console.log(a); // 10
+
+    // 3.
+    // import {b} from  './library.js';
+    // console.log(b); // 20
+
+    // 5 export default를 import 해오기: import 작명 from '경로';
+    // console.log(졸림); // 30
+
+    // 6. export를 import 해오기: import {변수명} from '경로';
+    // import {a} from './library.js';
+    // console.log(a); // 10
+
+    // 7. export default c와 export {a,b} 동시에 사용하려면?
+    // ! 순서 중요
+    // import c, {a,b} from './library.js';
+    // console.log(c); // 30
+
+    // 8. 변수명이 마음에 안들면 새로 짓기
+    // import {a as 별명} from './library.js';
+    // console.log(a); // ReferenceError: a is not defined
+    // console.log(별명); // 10
+
+    // 9. 자바스크립트 코드를 모두 import 해오려면? : *
+    // import * as 변수들명 from '경로';
+    // import * as 별명 from './library.js';
+    // console.log(별명); // Module {Symbol(Symbol.toStringTag): 'Module'} <- 이 안에 다 들었음
+    // console.log(별명.a); // 10
+    // ! export default 불러올땐
+    import 디폴트, * as 별명 from './library.js';
+    console.log(디폴트); // 30
+</script>
+</body>
+</html>
