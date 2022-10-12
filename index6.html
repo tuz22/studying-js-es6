@@ -12,8 +12,27 @@
   <custom-input name="id"></custom-input>
   <custom-input name="email"></custom-input>
 
+  <!-- shadow dom -->
+  <input type="range">
+
+  <div id="morder"></div>
+
+  <!-- <template>태그  -->
+  HTML 임시보관함
+  <template>
+    <div>여기 있는 태그들은 HTML 랜더링 x</div>
+  </template>
+
+  <template id ="template1">
+    <label>이메일을 입력하세요.</label><input>
+    <style>label { color : red }</style>
+  </template>
 
 
-  <script src="js/web-components.js"></script>
+
+
+
+  <!-- <script src="js/web-components.js"></script> -->
+  <script src="js/shadow-dom.js"></script>
 </body>
 </html>
