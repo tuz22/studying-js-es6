@@ -40,7 +40,7 @@ async function 더하기(){
 
 /* async 단점 */
 // 성공만 가능
-// 강제로 실패시 실행할 코드를 만들 수느 있음
+// 강제로 실패시 실행할 코드를 만들 수는 있음
 async function 더하기(){
   return Promise.reject('실패!'); // Uncaught (in promise) 실패!
 }
