@@ -38,6 +38,6 @@ var 프로미스 = new Promise(function(성공, 실패){
 });
 
 /* Promise의 3가지 상태 */
-// 1. 성공하면 <resolved>
-// 2. 판정 대기중이면 <pendig>
-// 3. 실패하면 <rejected>
+1. 성공하면 <resolved>
+2. 판정 대기중이면 <pending>
+3. 실패하면 <rejected>
